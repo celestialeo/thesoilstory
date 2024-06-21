@@ -8,7 +8,7 @@ function Navbar() {
           <p>Join the Waitlist! Experience something awesome</p>
           <div className="bg-white rounded-full w-[300px] py-3 px-3">
             <input type="text" placeholder="Your Email*" />
-            <button>Join Waitlist</button>
+            <button className="bg-git init">Join Waitlist</button>
           </div>
         </div>
         <div>explore</div>
