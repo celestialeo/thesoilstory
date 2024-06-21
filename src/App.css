@@ -12,3 +12,9 @@ body {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+.footerImage {
+  background-color: #4BAF47; /*Default bg, similar to the background's base color*/
+  background-image: url("./assets/footer-image-1.png");
+  background-position: right bottom; /*Positioning*/
+  background-repeat: no-repeat; /*Prevent showing multiple background images*/
+}
