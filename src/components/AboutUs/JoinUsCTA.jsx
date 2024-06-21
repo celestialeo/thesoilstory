@@ -1,4 +1,4 @@
-import backgroundImage from '../../assets/Property1=Active.png'; 
+import backgroundImage from "../../assets/Property1Active.png"; 
 
 const JoinUsCTA = () => {
     return (

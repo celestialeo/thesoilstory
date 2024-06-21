@@ -1,11 +1,9 @@
-import Header from "../Header/Header";
 import Navbar from "../Navbar/Navbar";
-
+import Home1 from "./Home1";
 function HomePage() {
   return (
     <div>
-      <Header />
-      
+      <Home1 />
       <Navbar />
     </div>
   );
