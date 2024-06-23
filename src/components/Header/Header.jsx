@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 function Header(props) {
@@ -18,7 +19,8 @@ function Header(props) {
       >
         <button onClick={() => navigateTo("/")}>Home</button>{" "}
         <button>The Soil Story</button>
-        <button>Our Team</button> <button>Blogs</button>
+        <button onClick={() => navigateTo("/team")}>Our Team</button>{" "}
+        <button>Blogs</button>
         <button onClick={() => navigateTo("/contact-us")}>Contact Us</button>
         <button> Partner With Us</button>
       </div>

@@ -26,7 +26,7 @@ function Contactus() {
               Get in Touch
             </h1>
             <p className="w-[35%] text-white text-base mb-30 h-[125px]">
-              We'd love to hear from you! Whether you have a question, need
+              We&apos;d love to hear from you! Whether you have a question, need
               assistance, or want to share your feedback, our team is here to
               help. Reach out to us using any of the methods below.
             </p>
