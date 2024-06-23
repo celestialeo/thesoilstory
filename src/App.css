@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
@@ -13,8 +13,71 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .footerImage {
-  background-color: #4BAF47; /*Default bg, similar to the background's base color*/
+  background-color: #4baf47; /*Default bg, similar to the background's base color*/
   background-image: url("./assets/footer-image-1.png");
   background-position: right bottom; /*Positioning*/
   background-repeat: no-repeat; /*Prevent showing multiple background images*/
+}
+.home3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+}
+
+.testimonial__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial__name {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.testimonial__age {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.testimonial__text {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.carousel__controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.carousel__control {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #888;
+}
+
+.carousel__control:hover {
+  color: #000;
 }
