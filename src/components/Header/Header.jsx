@@ -22,7 +22,9 @@ function Header(props) {
         <button onClick={() => navigateTo("/team")}>Our Team</button>{" "}
         <button>Blogs</button>
         <button onClick={() => navigateTo("/contact-us")}>Contact Us</button>
-        <button> Partner With Us</button>
+        <button onClick={() => navigateTo("/partner-with-us")}>
+          Partner With Us
+        </button>
       </div>
       <button className="bg-black text-white h-10 w-[130px] rounded-[6px]">
         Register Now
