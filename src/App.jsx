@@ -5,6 +5,7 @@ import Contactus from "./components/ContactUs/Contactus";
 import Team from "./components/Team/Team";
 import Joinus from "./components/JoinUs/Joinus";
 import Blog from "./components/blog/Blog";
+import AboutUs from "./components/AboutUs/AboutUs";
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/partner-with-us" element={<Joinus />} />
           <Route path="/blogs" element={<Blog />} />
+          <Route path="/the-soil-story" element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
     </>

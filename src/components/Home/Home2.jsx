@@ -12,8 +12,8 @@ function Home2() {
         <h1 className="font-semibold text-5xl mt-2">Get to know us</h1>
         <p className="w-[70%] mt-7">
           Welcome to The Soil Story, where your weekends get a rustic twist!
-          We're all about swapping city chaos for farm-fresh fun. From milking
-          cows to picking strawberries, we connect you with real farm
+          We&apos;re all about swapping city chaos for farm-fresh fun. From
+          milking cows to picking strawberries, we connect you with real farm
           adventures. Join us to dig into nature, embrace the countryside, and
           create unforgettable memories. Let’s make farm life your new favourite
           story! 🌾🐄🌻

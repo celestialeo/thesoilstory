@@ -18,7 +18,9 @@ function Header(props) {
         }
       >
         <button onClick={() => navigateTo("/")}>Home</button>{" "}
-        <button>The Soil Story</button>
+        <button onClick={() => navigateTo("/the-soil-story")}>
+          The Soil Story
+        </button>
         <button onClick={() => navigateTo("/team")}>Our Team</button>{" "}
         <button onClick={() => navigateTo("/blogs")}>Blogs</button>
         <button onClick={() => navigateTo("/contact-us")}>Contact Us</button>
