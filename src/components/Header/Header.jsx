@@ -20,7 +20,7 @@ function Header(props) {
         <button onClick={() => navigateTo("/")}>Home</button>{" "}
         <button>The Soil Story</button>
         <button onClick={() => navigateTo("/team")}>Our Team</button>{" "}
-        <button>Blogs</button>
+        <button onClick={() => navigateTo("/blogs")}>Blogs</button>
         <button onClick={() => navigateTo("/contact-us")}>Contact Us</button>
         <button onClick={() => navigateTo("/partner-with-us")}>
           Partner With Us

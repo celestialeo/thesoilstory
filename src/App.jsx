@@ -4,6 +4,7 @@ import HomePage from "./components/Home/HomePage";
 import Contactus from "./components/ContactUs/Contactus";
 import Team from "./components/Team/Team";
 import Joinus from "./components/JoinUs/Joinus";
+import Blog from "./components/blog/Blog";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
           <Route path="/contact-us" element={<Contactus />} />
           <Route path="/team" element={<Team />} />
           <Route path="/partner-with-us" element={<Joinus />} />
+          <Route path="/blogs" element={<Blog />} />
         </Routes>
       </BrowserRouter>
     </>

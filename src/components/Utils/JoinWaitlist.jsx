@@ -28,12 +28,18 @@ function JoinWaitlist(props) {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <div className="bg-white rounded-full w-[350px] py-2 px-2 flex justify-between mt-5 ps-5 ">
+      <div
+        className={
+          props.border === true
+            ? "bg-white rounded-full w-[350px] py-2 px-2 flex justify-between mt-5 ps-5 border-gray-300 border-2"
+            : "bg-white rounded-full w-[350px] py-2 px-2 flex justify-between mt-5 ps-5 "
+        }
+      >
         <input
           type="email"
           id="email"
           placeholder="Your Email*"
-          className=" rounded-full p-1 focus:outline-none text-black"
+          className="rounded-full p-1 focus:outline-none text-black"
           onChange={(e) => setEmail(e.target.value)}
         />
         <button
