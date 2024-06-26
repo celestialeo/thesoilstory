@@ -17,10 +17,10 @@ function Home1() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formUrl =
-      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVcU1--TIgSGzrQc3uKcWMsag-iVvushR06Du0LH64zSZlNw/formResponse";
+      "https://docs.google.com/forms/u/1/d/e/1FAIpQLSd9nF7rSOwEpXqvL9SkkKDFgKEJkZSJtlVDwP4OdBQ7mnA9gQ/formResponse";
     const data = new FormData();
 
-    data.append("entry.1011677350", Email); // Replace with actual field name
+    data.append("entry.937417346", Email); // Replace with actual field name
 
     fetch(formUrl, {
       method: "POST",
@@ -60,7 +60,7 @@ function Home1() {
               <div className="bg-transparent rounded-full w-[450px] py-1 px-2 flex justify-between mt-5 ps-5 border-white border-2">
                 <input
                   placeholder=" Email*"
-                  className=" rounded-full p-1 bg-transparent "
+                  className=" rounded-full p-1 bg-transparent text-white border-0 focus:outline-none"
                   type="email"
                   id="email"
                   value={Email}
