@@ -3,7 +3,13 @@ import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import JoinWaitlist from "../Utils/JoinWaitlist";
 function Navbar() {
+   const SendEmail = () => {
+     var subject = "Let's Connect!";
+     var body = "Hello,I'm [Your Name]!,would love to have chat with you!";
+     window.location.href = `mailto:contact@thesoilstory.in?subject=${subject}&body=${body}`;
+   };
   return (
     <>
       <div className="footerImage">
@@ -11,16 +17,7 @@ function Navbar() {
           <div>
             <img src={Logo} alt="logo" />
             <p>Join the Waitlist! Experience something awesome</p>
-            <div className="bg-white rounded-full w-[350px] py-2 px-2 flex justify-between mt-5 ps-5">
-              <input
-                type="text"
-                placeholder="Your Email*"
-                className=" rounded-full p-1"
-              />
-              <button className="bg-yellow-400 py-2 px-3 rounded-full text-black">
-                Join Waitlist
-              </button>
-            </div>
+            <JoinWaitlist btncolor="#FAB917" />
           </div>
           <div className="flex align-top justify-evenly w-full">
             <div>
@@ -35,7 +32,10 @@ function Navbar() {
               <h2 className="font-bold mb-7 text-xl">Contact Info</h2>
               <div className="flex">
                 <div className="">
-                  <div className="flex justify-start items-center gap-5 mb-4">
+                  <div
+                    className="flex justify-start items-center gap-5 mb-4 hover:cursor-pointer"
+                    onClick={SendEmail}
+                  >
                     {" "}
                     <div className="glassEffect w-max p-2">
                       <MdEmail />
@@ -48,7 +48,7 @@ function Navbar() {
                       </span>
                     </p>
                   </div>
-                  <div className="flex justify-start items-center gap-5 mb-4">
+                  <div className="flex justify-start items-center gap-5 mb-4 ">
                     <div className="glassEffect w-max p-2">
                       <FaPhone />
                     </div>
@@ -62,7 +62,12 @@ function Navbar() {
                       </span>
                     </p>
                   </div>
-                  <div className="flex justify-start items-center gap-5 mb-4">
+                  <div
+                    className="flex justify-start items-center gap-5 mb-4 hover:cursor-pointer"
+                    onClick={() =>
+                      window.open("https://www.instagram.com/thesoilstory.in/")
+                    }
+                  >
                     <div className="glassEffect w-max p-2">
                       <FaInstagram />
                     </div>
@@ -75,7 +80,14 @@ function Navbar() {
                       </span>
                     </p>
                   </div>
-                  <div className="flex justify-start items-center gap-5 mb-4">
+                  <div
+                    className="flex justify-start items-center gap-5 mb-4 hover:cursor-pointer"
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/company/thesoilstory/"
+                      )
+                    }
+                  >
                     <div className="glassEffect w-max p-2">
                       <FaLinkedin />
                     </div>
