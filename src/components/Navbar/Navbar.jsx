@@ -5,6 +5,11 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import JoinWaitlist from "../Utils/JoinWaitlist";
 function Navbar() {
+   const SendEmail = () => {
+     var subject = "Let's Connect!";
+     var body = "Hello,I'm [Your Name]!,would love to have chat with you!";
+     window.location.href = `mailto:contact@thesoilstory.in?subject=${subject}&body=${body}`;
+   };
   return (
     <>
       <div className="footerImage">
@@ -27,7 +32,10 @@ function Navbar() {
               <h2 className="font-bold mb-7 text-xl">Contact Info</h2>
               <div className="flex">
                 <div className="">
-                  <div className="flex justify-start items-center gap-5 mb-4">
+                  <div
+                    className="flex justify-start items-center gap-5 mb-4 hover:cursor-pointer"
+                    onClick={SendEmail}
+                  >
                     {" "}
                     <div className="glassEffect w-max p-2">
                       <MdEmail />
@@ -40,7 +48,7 @@ function Navbar() {
                       </span>
                     </p>
                   </div>
-                  <div className="flex justify-start items-center gap-5 mb-4">
+                  <div className="flex justify-start items-center gap-5 mb-4 ">
                     <div className="glassEffect w-max p-2">
                       <FaPhone />
                     </div>
@@ -54,7 +62,12 @@ function Navbar() {
                       </span>
                     </p>
                   </div>
-                  <div className="flex justify-start items-center gap-5 mb-4">
+                  <div
+                    className="flex justify-start items-center gap-5 mb-4 hover:cursor-pointer"
+                    onClick={() =>
+                      window.open("https://www.instagram.com/thesoilstory.in/")
+                    }
+                  >
                     <div className="glassEffect w-max p-2">
                       <FaInstagram />
                     </div>
@@ -67,7 +80,14 @@ function Navbar() {
                       </span>
                     </p>
                   </div>
-                  <div className="flex justify-start items-center gap-5 mb-4">
+                  <div
+                    className="flex justify-start items-center gap-5 mb-4 hover:cursor-pointer"
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/company/thesoilstory/"
+                      )
+                    }
+                  >
                     <div className="glassEffect w-max p-2">
                       <FaLinkedin />
                     </div>

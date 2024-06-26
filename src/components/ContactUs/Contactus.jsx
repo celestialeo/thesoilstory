@@ -7,6 +7,11 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import Navbar from "../Navbar/Navbar";
 function Contactus() {
+    const SendEmail = () => {
+      var subject = "Let's Connect!";
+      var body = "Hello,I'm [Your Name]!,would love to have chat with you!";
+      window.location.href = `mailto:contact@thesoilstory.in?subject=${subject}&body=${body}`;
+    };
   return (
     <>
       <Header text="white" />
@@ -34,9 +39,12 @@ function Contactus() {
         </div>
       </div>
       <div className="flex gap-20 justify-center mt-10 mb-20">
-        <div className="text-center w-[250px] h-[250px] border ">
+        <div
+          className="text-center w-[250px] h-[250px] border hover:cursor-pointer "
+          onClick={SendEmail}
+        >
           <h3 className="mt-5 mb-8 text-xl font-semibold">Email</h3>
-          <button className=" hover:bg-[#4BAF47] text-[#4BAF47]  hover:text-white font-bold rounded-full p-3 border">
+          <button className=" hover:bg-[#4BAF47] text-[#4BAF47]  hover:text-white font-bold rounded-full p-3 border ">
             <MdEmail size="40px" />
           </button>
           <h4 className=" mt-10">contact@thesoilstory.in</h4>
@@ -55,7 +63,12 @@ function Contactus() {
         <div className="text-center w-[250px] h-[250px] border ">
           <h3 className="mt-5 mb-4 text-xl font-semibold">Social Media</h3>
           <div className="px-7">
-            <div className="flex justify-start items-center gap-5 mb-5">
+            <div
+              className="flex justify-start items-center gap-5 mb-5 hover:cursor-pointer"
+              onClick={() =>
+                window.open("https://www.instagram.com/thesoilstory.in/")
+              }
+            >
               <button className=" hover:bg-[#4BAF47] text-[#4BAF47]  hover:text-white font-bold rounded-full p-2 border">
                 <FaInstagram size="20px" />
               </button>
@@ -65,7 +78,12 @@ function Contactus() {
                 @thesoilstory.in
               </h4>
             </div>
-            <div className="flex justify-start items-center gap-5 mb-5">
+            <div
+              className="flex justify-start items-center gap-5 mb-5 hover:cursor-pointer"
+              onClick={() =>
+                window.open("https://www.linkedin.com/company/thesoilstory/")
+              }
+            >
               <button className=" hover:bg-[#4BAF47] text-[#4BAF47]  hover:text-white font-bold rounded-full p-2 border">
                 <FaLinkedin size="20px" />
               </button>
@@ -75,7 +93,14 @@ function Contactus() {
                 The Soil Story
               </h4>
             </div>
-            <div className="flex justify-start items-center gap-5 mb-5">
+            <div
+              className="flex justify-start items-center gap-5 mb-5 hover:cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://youtube.com/@thesoilstory?si=MUM4eXeoDNAE6bri"
+                )
+              }
+            >
               <button className=" hover:bg-[#4BAF47] text-[#4BAF47]  hover:text-white font-bold rounded-full p-2 border">
                 <FaYoutube size="20px" />
               </button>
