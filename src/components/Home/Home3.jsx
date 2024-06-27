@@ -12,7 +12,7 @@ const testimonials = [
     image: avatar, // Replace with actual image URL
   },
   {
-    name: "Faith Rosales",
+    name: "Faith Ibrahim",
     age: 25,
     text: "I'm thrilled about the launch of The Soil Story, which matches my passion for agritourism. My family and I have been fortunate to experience various agricultural activities, from harvesting crops to learning sustainable farming practices. The Soil Story offers just that – nature and fun, all in one place!",
     image: avatar2, // Replace with actual image URL
