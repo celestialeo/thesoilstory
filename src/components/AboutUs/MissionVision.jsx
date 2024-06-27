@@ -1,11 +1,21 @@
 import missionImage from "../../assets/OurMission.png";
 import visionImage from "../../assets/OurVision.png";
+import { motion } from "framer-motion";
 
 const MissionVision = () => {
   return (
     <>
       <div className="px-32 py-32 ">
-        <div className="flex gap-20 items-start">
+        <motion.div
+          className="flex gap-20 items-start"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 1 }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: -150 },
+          }}
+        >
           <img
             src={visionImage}
             alt="Our Mission"
@@ -28,8 +38,17 @@ const MissionVision = () => {
               who make it all possible.
             </p>
           </div>
-        </div>
-        <div className="flex gap-20 items-start mt-24">
+        </motion.div>
+        <motion.div
+          className="flex gap-20 items-start mt-24"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 1 }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: 150 },
+          }}
+        >
           <div>
             <h2
               className="text-5xl text-[#4BAF47] font-semibold"
@@ -51,7 +70,7 @@ const MissionVision = () => {
             alt="Our Vision"
             className="rounded-xl w-full mb-4"
           />
-        </div>
+        </motion.div>
       </div>
     </>
   );

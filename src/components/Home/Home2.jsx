@@ -1,7 +1,18 @@
 import home2 from "../../assets/HomePicturescollage.png";
+import { motion } from "framer-motion";
+
 function Home2() {
   return (
-    <div className="py-10 px-20 flex justify-center">
+    <motion.div
+      className="py-10 px-20 flex justify-center"
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 1, ease: "linear" }}
+      variants={{
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: 0 },
+      }}
+    >
       <div className="w-[50%]">
         <h2
           style={{ fontFamily: "Caveat" }}
@@ -25,7 +36,7 @@ function Home2() {
       <div className="w-[40%] text-start">
         <img src={home2} alt="home2Image" />
       </div>
-    </div>
+    </motion.div>
   );
 }
 

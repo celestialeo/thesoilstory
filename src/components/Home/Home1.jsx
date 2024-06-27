@@ -1,6 +1,7 @@
 import { useState } from "react";
 import img1 from "../../assets/homeImg1.png";
 import Header from "../Header/Header";
+import { motion } from "framer-motion";
 
 function Home1() {
   // const [formData, setFormData] = useState({
@@ -42,7 +43,17 @@ function Home1() {
         className="bg-no-repeat bg-cover"
       >
         <Header />
-        <div className="text-center p-20 h-[100vh]">
+        <motion.div
+          className="text-center p-20 h-[100vh]"
+          whileInView="visible"
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: "linear" }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: 0 },
+          }}
+        >
           <h1 className="font-extrabold text-6xl text-white mt-32">
             Reset your Weekends
           </h1>
@@ -75,7 +86,7 @@ function Home1() {
               </div>
             </form>
           </center>
-        </div>
+        </motion.div>
       </div>
     </>
   );

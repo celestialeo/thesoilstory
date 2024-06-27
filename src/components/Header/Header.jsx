@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import Logo from "../../assets/logo.png";
 function Header(props) {
   const navigate = useNavigate();
@@ -8,7 +9,17 @@ function Header(props) {
   };
 
   return (
-    <div className="flex justify-between h-[60px] py-12 px-16 items-center">
+    <motion.div
+      className="flex justify-between h-[60px] py-12 px-16 items-center"
+      whileInView="visible"
+      transition={{ duration: 1, ease: "linear" }}
+      variants={{
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: 0 },
+      }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+    >
       <img src={Logo} alt="Logo" className="bg-transparent h-24 w-24" />
       <div
         className={
@@ -31,7 +42,7 @@ function Header(props) {
       <button className="bg-black text-white h-10 w-[130px] rounded-[6px]">
         Register Now
       </button>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import bgimg from "../../assets/aboutusbg.png";
+import { motion } from "framer-motion";
+
 const services = [
   {
     title: "Authentic Farm Experiences",
@@ -47,7 +49,12 @@ const WhatWeOffer = () => (
           <h1 className="text-5xl font-semibold text-white mb-20">
             What we offer
           </h1>
-          <div>
+          <motion.div
+            whileInView="visible"
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 2.6, ease: "linear" }}
+          >
             <div className="mt-10 flex flex-wrap gap-8 justify-center">
               {services.map((service, idx) => (
                 <div
@@ -60,7 +67,7 @@ const WhatWeOffer = () => (
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </center>
       </div>
     </div>
