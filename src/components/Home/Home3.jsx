@@ -1,6 +1,6 @@
-import avatar from "../../assets/Avatar.png"; 
-import avatar2 from "../../assets/Avatar2.png"; 
-import avatar3 from "../../assets/Avatar3.png"; 
+import avatar from "../../assets/karan.jpg";
+import avatar2 from "../../assets/Faith.jpg";
+import avatar3 from "../../assets/Marie.png";
 import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
