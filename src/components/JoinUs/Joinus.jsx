@@ -220,7 +220,10 @@ function Joinus() {
             experiences for our visitors. Thank you for your interest in The
             Soil Story!
           </p>
-          <button className="flex gap-5 rounded-md bg-[#1D1D1D] text-white p-4 justify-center items-center">
+          <button
+            className="flex gap-5 rounded-md bg-[#1D1D1D] text-white p-4 justify-center items-center"
+            onClick={() => window.open("https://forms.gle/xvedy8S7DvvVnuR37")}
+          >
             Fill Registration form <GoArrowRight />
           </button>
         </div>
