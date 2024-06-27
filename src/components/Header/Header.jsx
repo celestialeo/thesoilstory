@@ -39,7 +39,10 @@ function Header(props) {
           Partner With Us
         </button>
       </div>
-      <button className="bg-black text-white h-10 w-[130px] rounded-[6px]">
+      <button
+        className="bg-black text-white h-10 w-[130px] rounded-[6px]"
+        onClick={() => navigateTo("/join-waitlist")}
+      >
         Register Now
       </button>
     </motion.div>

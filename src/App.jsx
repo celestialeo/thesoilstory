@@ -6,6 +6,7 @@ import Team from "./components/Team/Team";
 import Joinus from "./components/JoinUs/Joinus";
 import Blog from "./components/blog/Blog";
 import AboutUs from "./components/AboutUs/AboutUs";
+import JoinUsCTA from "./components/AboutUs/JoinUsCTA";
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
           <Route path="/partner-with-us" element={<Joinus />} />
           <Route path="/blogs" element={<Blog />} />
           <Route path="/the-soil-story" element={<AboutUs />} />
+          <Route path="/join-waitlist" element={<JoinUsCTA />} />
         </Routes>
       </BrowserRouter>
     </>
