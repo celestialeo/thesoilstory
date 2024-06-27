@@ -5,37 +5,45 @@ import Header from "../Header/Header";
 import { PiPenNibStraight } from "react-icons/pi";
 import { GoArrowRight } from "react-icons/go";
 import Navbar from "../Navbar/Navbar";
+import { motion } from "framer-motion";
+
 function Joinus() {
   const data = [
     {
       title: "Increased Revenue",
       description:
         "Diversify your income by hosting tourists on your farm. Agrotourism offers a new revenue stream that complements your existing agricultural activities.",
+      transition: 0,
     },
     {
       title: "Community Support",
       description:
         "Be a part of a network that values and promotes sustainable farming practices. Collaborate with other like-minded farmers and organizations to enhance your impact.",
+      transition: 0.4,
     },
     {
       title: "Marketing Assistance",
       description:
         "Gain visibility through our platform. We help promote your farm and experiences to a wide audience of urban tourists eager to connect with nature.",
+      transition: 0.6,
     },
     {
       title: "Capacity Building",
       description:
         "Access resources and training to improve your hospitality and tourism services. Learn best practices in agrotourism to offer unforgettable experiences to your visitors.",
+      transition: 0.8,
     },
     {
       title: "Direct Market Access",
       description:
         "Sell your farm products directly to visitors, enhancing your profit margins and building a loyal customer base.",
+      transition: 1,
     },
     {
       title: "Direct Market Access",
       description:
         "Sell your farm products directly to visitors, enhancing your profit margins and building a loyal customer base.",
+      transition: 1.2,
     },
   ];
   const steps = [
@@ -44,18 +52,21 @@ function Joinus() {
       title: "Fill Out the Application",
       description:
         "Provide us with details about your farm and the experiences you offer. This helps us understand your unique offerings and how they align with our mission.",
+      transition: 0,
     },
     {
       number: 2,
       title: "Get Vetted",
       description:
         "Our team will visit your farm to ensure it meets our quality and sustainability standards. This process helps us maintain high standards for our visitors.",
+      transition: 0.5,
     },
     {
       number: 3,
       title: "Start Hosting",
       description:
         "Once approved, you can start hosting visitors and sharing your farm life with them. We provide ongoing support to help you succeed.",
+      transition: 1,
     },
   ];
 
@@ -94,7 +105,22 @@ function Joinus() {
             {
               return (
                 <>
-                  <div className="w-[33%] mb-10">
+                  <motion.div
+                    className="w-[33%] mb-10"
+                    key={idx}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{
+                      duration: `1.2`,
+                      ease: "linear",
+                      delay: `${x.transition}`,
+                    }}
+                    variants={{
+                      visible: { opacity: 1, x: 0 },
+                      hidden: { opacity: 0, x: 0 },
+                    }}
+                    viewport={{ once: true }}
+                  >
                     <div
                       id={idx}
                       className="card border-t-2 border-gray-100 rounded-lg p-4 m-2  flex-0 w-[350px]"
@@ -107,7 +133,7 @@ function Joinus() {
                       <h3 className="font-bold mb-4">{x?.title}</h3>
                       <p className="text-gray-500">{x?.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 </>
               );
             }
@@ -125,11 +151,37 @@ function Joinus() {
               {step.number === 1 ? (
                 ""
               ) : (
-                <hr className="w-full h-[1px] mx-auto my-4 bg-gray-100 border-0 rounded md:my-5 dark:bg-gray-700"></hr>
+                <motion.hr
+                  className="w-full h-[1px] mx-auto my-4 bg-gray-100 border-0 rounded md:my-5 dark:bg-gray-700"
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{
+                    duration: `1.2`,
+                    ease: "linear",
+                    delay: `${step.transition}`,
+                  }}
+                  variants={{
+                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: 0 },
+                  }}
+                  viewport={{ once: true }}
+                ></motion.hr>
               )}
-              <div
+              <motion.div
                 key={step.number}
                 className="flex flex-col items-center z-10"
+                initial="hidden"
+                whileInView="visible"
+                transition={{
+                  duration: `1.2`,
+                  ease: "linear",
+                  delay: `${step.transition}`,
+                }}
+                variants={{
+                  visible: { opacity: 1, x: 0 },
+                  hidden: { opacity: 0, x: 0 },
+                }}
+                viewport={{ once: true }}
               >
                 <div className="flex justify-center items-center h-12 w-12 bg-green-500 rounded-full text-white text-xl font-bold">
                   {step.number}
@@ -140,13 +192,23 @@ function Joinus() {
                 <p className="mt-2 text-center text-gray-600">
                   {step.description}
                 </p>
-              </div>
+              </motion.div>
             </>
           ))}
         </div>
       </div>
 
-      <div className="mt-56 flex px-32 relative items-start">
+      <motion.div
+        className="mt-56 flex px-32 relative items-start"
+        whileInView="visible"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "linear" }}
+        variants={{
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: 0 },
+        }}
+      >
         <div className="pb-32">
           <h1 className="text-4xl font-bold mb-10">Register Your Interest</h1>
           <p className="w-[65%] mb-10">
@@ -165,7 +227,7 @@ function Joinus() {
         <div className="absolute bottom-0 right-0">
           <img src={img3} alt="img" className="" />
         </div>
-      </div>
+      </motion.div>
       <Navbar />
     </>
   );

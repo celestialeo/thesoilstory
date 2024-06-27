@@ -4,12 +4,19 @@ import { FaPhone } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import JoinWaitlist from "../Utils/JoinWaitlist";
+import { useNavigate } from "react-router-dom";
 function Navbar() {
-   const SendEmail = () => {
-     var subject = "Let's Connect!";
-     var body = "Hello,I'm [Your Name]!,would love to have chat with you!";
-     window.location.href = `mailto:contact@thesoilstory.in?subject=${subject}&body=${body}`;
-   };
+  const SendEmail = () => {
+    var subject = "Let's Connect!";
+    var body = "Hello,I'm [Your Name]!,would love to have chat with you!";
+    window.location.href = `mailto:contact@thesoilstory.in?subject=${subject}&body=${body}`;
+  };
+  const navigate = useNavigate();
+  const navigateTo = (link) => {
+    window.scrollTo(0, 0);
+    navigate(link);
+  };
+
   return (
     <>
       <div className="footerImage">
@@ -22,11 +29,24 @@ function Navbar() {
           <div className="flex align-top justify-evenly w-full">
             <div>
               <h2 className="font-bold mb-7 text-xl">Explore</h2>
-              <p className="mb-4">The Soil Story</p>
-              <p className="mb-4">Our Team</p>
-              <p className="mb-4">Blogs</p>
-              <p className="mb-4">Contact Us</p>
-              <p className="mb-4">Partner With Us</p>
+              <p className="mb-4" onClick={() => navigateTo("/the-soil-story")}>
+                The Soil Story
+              </p>
+              <p className="mb-4" onClick={() => navigateTo("/team")}>
+                Our Team
+              </p>
+              <p className="mb-4" onClick={() => navigateTo("/blogs")}>
+                Blogs
+              </p>
+              <p className="mb-4" onClick={() => navigateTo("/contact-us")}>
+                Contact Us
+              </p>
+              <p
+                className="mb-4"
+                onClick={() => navigateTo("/partner-with-us")}
+              >
+                Partner With Us
+              </p>
             </div>
             <div className="font-bold">
               <h2 className="font-bold mb-7 text-xl">Contact Info</h2>

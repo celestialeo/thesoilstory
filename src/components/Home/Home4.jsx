@@ -1,6 +1,7 @@
 import img1 from "../../assets/Group.png";
 import img2 from "../../assets/Group2.png";
 import img3 from "../../assets/Group3.png";
+import { motion } from "framer-motion";
 
 function Home4() {
   const PartnerImg = [img1, img2, img3];
@@ -9,7 +10,16 @@ function Home4() {
       <h1 className="font-semibold text-5xl mt-20 mb-20 text-center ">
         Our Partners
       </h1>
-      <div className="flex justify-between px-20 items-center ">
+      <motion.div
+        className="flex justify-between px-20 items-center "
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 1, ease: "linear" }}
+        variants={{
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: 0 },
+        }}
+      >
         {PartnerImg.map((img, index) => {
           return (
             <>
@@ -17,7 +27,7 @@ function Home4() {
             </>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 }

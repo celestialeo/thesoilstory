@@ -1,4 +1,6 @@
-import avatar from "../../assets/Avatar.png"; // Ensure this is set up for any custom global styles
+import avatar from "../../assets/Avatar.png"; 
+import avatar2 from "../../assets/Avatar2.png"; 
+import avatar3 from "../../assets/Avatar3.png"; 
 import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
@@ -13,7 +15,13 @@ const testimonials = [
     name: "Faith Rosales",
     age: 25,
     text: "I'm thrilled about the launch of The Soil Story, which matches my passion for agritourism. My family and I have been fortunate to experience various agricultural activities, from harvesting crops to learning sustainable farming practices. The Soil Story offers just that – nature and fun, all in one place!",
-    image: avatar, // Replace with actual image URL
+    image: avatar2, // Replace with actual image URL
+  },
+  {
+    name: "Marie Munzi",
+    age: 24,
+    text: "My visits to farms have always been magical, from enjoying picnics in parks to dinners with friends. My childhood visit to a farm in Pune left a lasting impression. I'd love an online platform like The Soil Story to easily access these enriching experiences and connect more deeply with nature",
+    image: avatar3, // Replace with actual image URL
   },
 ];
 
