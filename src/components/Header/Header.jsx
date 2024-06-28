@@ -23,7 +23,7 @@ function Header(props) {
       <img src={Logo} alt="Logo" className="bg-transparent h-24 w-24" />
       <div
         className={
-          props?.text === "white"
+          props?.text === "white" 
             ? "flex gap-10 text-black"
             : "flex gap-10 text-white"
         }

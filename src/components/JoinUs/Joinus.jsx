@@ -40,9 +40,9 @@ function Joinus() {
       transition: 1,
     },
     {
-      title: "Direct Market Access",
+      title: "Corporate Social Responsibility",
       description:
-        "Sell your farm products directly to visitors, enhancing your profit margins and building a loyal customer base.",
+        "We actively collaborate with corporations to improve the state of agriculture through their Corporate Social Responsibility initiatives and promote agrotourism in India.",
       transition: 1.2,
     },
   ];
