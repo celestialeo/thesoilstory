@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
 import avatar from "../../assets/karan.jpg";
 import avatar2 from "../../assets/Faith.jpg";
 import avatar3 from "../../assets/Marie.png";
 import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
+import Carousel from "react-spring-3d-carousel";
+import { config } from "react-spring";
 const testimonials = [
   {
     name: "Karan Surana",
@@ -36,6 +39,29 @@ const Home3 = () => {
     setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
   };
 
+  const TestimonialCard = ({ testimonial }) => (
+    <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg text-center w-[500px] mb-10">
+      <div className="testimonial mb-6">
+        <img
+          src={testimonial.image}
+          alt={testimonial.name}
+          className="w-24 h-24 rounded-full mx-auto mb-4"
+        />
+        <h2 className="text-xl font-bold">
+          {testimonial.name},{" "}
+          <span className="text-gray-500 text-sm">Age {testimonial.age}</span>
+        </h2>
+        <p className="text-gray-700 mt-4 text-start">
+          &quot;{testimonial.text}&quot;
+        </p>
+      </div>
+    </div>
+  );
+  const slides = testimonials.map((testimonial, index) => ({
+    key: index,
+    content: <TestimonialCard testimonial={testimonial} />,
+  }));
+
   return (
     <>
       <center>
@@ -45,29 +71,20 @@ const Home3 = () => {
         >
           Testimonials
         </h2>
-        <h1 className="font-semibold text-5xl mt-2 mb-10">
+        <h1 className="font-semibold text-5xl mt-2">
           What they Say about Agro Tourism!
         </h1>
-        <div className="flex flex-col items-center bg-white p-6 rounded-lg shadow-lg text-center w-[500px] mb-10">
-          <div className="testimonial mb-6">
-            <img
-              src={testimonials[current].image}
-              alt={testimonials[current].name}
-              className="w-24 h-24 rounded-full mx-auto mb-4"
-            />
-            <h2 className="text-xl font-bold">
-              {testimonials[current].name},{" "}
-              <span className="text-gray-500 text-sm">
-                Age {testimonials[current].age}
-              </span>
-            </h2>
-            <p className="text-gray-700 mt-4 text-start">
-              &quot;{testimonials[current].text}&quot;
-            </p>
-          </div>
+        <div className="mx-auto w-full max-w-6xl my-60">
+          <Carousel
+            slides={slides}
+            goToSlide={current}
+            showNavigation={false}
+            offsetRadius={2}
+            animationConfig={config.gentle}
+          />
         </div>
       </center>
-      <div className="flex justify-center gap-6 w-full">
+      <div className="flex justify-center gap-6 w-full mt-[450px] z-10">
         <button
           className=" hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
           onClick={handlePrevious}
