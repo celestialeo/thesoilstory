@@ -7,13 +7,12 @@ function OurStory() {
     <>
       <motion.div
         className="flex justify-center items-center"
+        initial="hidden"
         whileInView="visible"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "linear" }}
         variants={{
-          visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: 0 },
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: -50 },
         }}
       >
         <h1 className="text-4xl font-semibold">
@@ -22,13 +21,12 @@ function OurStory() {
         <img src={leaf} alt="laef" className="w-20" />
       </motion.div>
       <motion.center
+        initial="hidden"
         whileInView="visible"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "linear" }}
         variants={{
-          visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: 0 },
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: -50 },
         }}
       >
         <p className="w-[70%] mb-10">
@@ -40,6 +38,16 @@ function OurStory() {
           or a curious traveller seeking unique experiences, we invite you to
           explore the enchanting world of agrotourism with us.
         </p>
+      </motion.center>
+      <motion.center
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 1, ease: "linear" }}
+        variants={{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 50 },
+        }}
+      >
         <img src={about0} alt="bg" />
       </motion.center>
     </>

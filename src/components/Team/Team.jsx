@@ -86,7 +86,7 @@ function Team() {
           {TeamData?.map((data, idx) => {
             return (
               <>
-                <div className="text-center" key={idx}>
+                <div className="text-center hover:scale-[1.1]" key={idx}>
                   <img
                     src={data?.image}
                     alt={data?.shortName}

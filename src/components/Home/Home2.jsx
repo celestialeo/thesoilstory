@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 
 function Home2() {
   return (
-    <motion.div
-      className="py-10 px-20 flex justify-center"
-      initial="hidden"
-      whileInView="visible"
-      transition={{ duration: 1, ease: "linear" }}
-      variants={{
-        visible: { opacity: 1, x: 0 },
-        hidden: { opacity: 0, x: 0 },
-      }}
-    >
-      <div className="w-[50%]">
+    <div className="py-10 px-20 flex justify-center">
+      <motion.div
+        className="w-[50%]"
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 1 }}
+        variants={{
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: -150 },
+        }}
+      >
         <h2
           style={{ fontFamily: "Caveat" }}
           className="text-[#4BAF47] text-4xl"
@@ -32,11 +32,20 @@ function Home2() {
         <button className="px-4 py-2 text-sm bg-[#4BAF47] text-white rounded-md mt-6">
           Discover More
         </button>
-      </div>
-      <div className="w-[40%] text-start">
+      </motion.div>
+      <motion.div
+        className="w-[40%] text-start"
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 1 }}
+        variants={{
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: 150 },
+        }}
+      >
         <img src={home2} alt="home2Image" />
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
 

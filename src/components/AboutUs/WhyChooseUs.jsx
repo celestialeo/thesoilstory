@@ -25,9 +25,18 @@ const WhyChooseUs = () => {
     <>
       <div className="flex px-32 mb-20">
         <div className=" w-[90%]">
-          <h2 className="text-4xl font-bold mb-14">
+          <motion.h2
+            className="text-4xl font-bold mb-14"
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 1.6 }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -150 },
+            }}
+          >
             Why Choose <span className="text-[#2FB95D]">Us?</span>
-          </h2>
+          </motion.h2>
           {Data.map((info, idx) => {
             return (
               <>
@@ -45,7 +54,6 @@ const WhyChooseUs = () => {
                     visible: { opacity: 1, x: 0 },
                     hidden: { opacity: 0, x: 0 },
                   }}
-                  viewport={{ once: true }}
                 >
                   <div className="bg-[#2FB95D] p-2 rounded-lg">
                     <IoCheckmark color="white" size={30} />
@@ -61,13 +69,12 @@ const WhyChooseUs = () => {
         </div>
 
         <motion.div
+          initial="hidden"
           whileInView="visible"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "linear" }}
           variants={{
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: 0 },
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0.5 },
           }}
         >
           <img

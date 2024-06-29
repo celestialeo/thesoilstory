@@ -50,10 +50,13 @@ const WhatWeOffer = () => (
             What we offer
           </h1>
           <motion.div
+            initial="hidden"
             whileInView="visible"
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 2.6, ease: "linear" }}
+            transition={{ duration: 1, ease: "linear" }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0.7 },
+            }}
           >
             <div className="mt-10 flex flex-wrap gap-8 justify-center">
               {services.map((service, idx) => (

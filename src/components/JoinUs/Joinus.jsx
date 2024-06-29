@@ -93,7 +93,17 @@ function Joinus() {
               Join Us in Promoting Sustainable Agrotourism...
             </h3>
           </div>
-          <img src={img2} alt="img2" />
+          <motion.img
+            src={img2}
+            alt="img2"
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.7, ease: "linear" }}
+            variants={{
+              visible: { opacity: 1 },
+              hidden: { opacity: 0 },
+            }}
+          />
         </div>
       </div>
       <div>
@@ -144,7 +154,7 @@ function Joinus() {
       <h1 className="text-4xl font-bold my-14 text-center">
         How to Become a Partner
       </h1>
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-4 px-48">
         <div className="relative flex justify-around items-start mt-10">
           {steps.map((step) => (
             <>
@@ -198,18 +208,17 @@ function Joinus() {
         </div>
       </div>
 
-      <motion.div
-        className="mt-56 flex px-32 relative items-start"
-        whileInView="visible"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "linear" }}
-        variants={{
-          visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: 0 },
-        }}
-      >
-        <div className="pb-32">
+      <div className="mt-56 flex px-32 relative items-start">
+        <motion.div
+          className="pb-32"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.8, ease: "linear" }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: -100 },
+          }}
+        >
           <h1 className="text-4xl font-bold mb-10">Register Your Interest</h1>
           <p className="w-[65%] mb-10">
             Ready to join The Soil Story family? Click on the link given below
@@ -226,11 +235,20 @@ function Joinus() {
           >
             Fill Registration form <GoArrowRight />
           </button>
-        </div>
-        <div className="absolute bottom-0 right-0">
+        </motion.div>
+        <motion.div
+          className="absolute bottom-0 right-0"
+          initial="hidden"
+          whileInView="visible"
+          transition={{ duration: 0.8, ease: "linear" }}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: 100 },
+          }}
+        >
           <img src={img3} alt="img" className="" />
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
       <Navbar />
     </>
   );
