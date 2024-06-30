@@ -5,13 +5,14 @@ import { FaPhone } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { SocialIcon } from "react-social-icons";
 import Navbar from "../Navbar/Navbar";
 function Contactus() {
-    const SendEmail = () => {
-      var subject = "Let's Connect!";
-      var body = "Hello,I'm [Your Name]!,would love to have chat with you!";
-      window.location.href = `mailto:contact@thesoilstory.in?subject=${subject}&body=${body}`;
-    };
+  const SendEmail = () => {
+    var subject = "Let's Connect!";
+    var body = "Hello,I'm [Your Name]!,would love to have chat with you!";
+    window.location.href = `mailto:contact@thesoilstory.in?subject=${subject}&body=${body}`;
+  };
   return (
     <>
       <Header text="white" />
@@ -69,8 +70,12 @@ function Contactus() {
                 window.open("https://www.instagram.com/thesoilstory.in/")
               }
             >
-              <button className=" hover:bg-[#4BAF47] text-[#4BAF47]  hover:text-white font-bold rounded-full p-2 border">
-                <FaInstagram size="20px" />
+              <button className=" rounded-full p-2 border">
+                {/* <FaInstagram size="20px" /> */}
+                <SocialIcon
+                  network="instagram"
+                  style={{ height: 25, width: 25 }}
+                />
               </button>
               <h4 className="text-xs text-start">
                 <span className="text-bold ">Instagram</span>
@@ -84,8 +89,11 @@ function Contactus() {
                 window.open("https://www.linkedin.com/company/thesoilstory/")
               }
             >
-              <button className=" hover:bg-[#4BAF47] text-[#4BAF47]  hover:text-white font-bold rounded-full p-2 border">
-                <FaLinkedin size="20px" />
+              <button className="border rounded-full p-2">
+                <SocialIcon
+                  network="linkedin"
+                  style={{ height: 25, width: 25 }}
+                />
               </button>
               <h4 className="text-xs text-start">
                 <span className="text-bold ">LinkedIn</span>
@@ -101,8 +109,12 @@ function Contactus() {
                 )
               }
             >
-              <button className=" hover:bg-[#4BAF47] text-[#4BAF47]  hover:text-white font-bold rounded-full p-2 border">
-                <FaYoutube size="20px" />
+              <button className=" rounded-full p-2 border">
+                {/* <FaYoutube size="20px" /> */}
+                <SocialIcon
+                  network="youtube"
+                  style={{ height: 25, width: 25 }}
+                />
               </button>
               <h4 className="text-xs text-start">
                 <span className="text-bold ">YouTube</span>

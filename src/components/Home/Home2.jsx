@@ -1,7 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import home2 from "../../assets/HomePicturescollage.png";
 import { motion } from "framer-motion";
 
 function Home2() {
+  const navigate = useNavigate();
+  const navigateTo = (link) => {
+    navigate(link);
+  };
   return (
     <div className="py-10 px-20 flex justify-center">
       <motion.div
@@ -29,7 +34,10 @@ function Home2() {
           create unforgettable memories. Let’s make farm life your new favourite
           story! 🌾🐄🌻
         </p>
-        <button className="px-4 py-2 text-sm bg-[#4BAF47] text-white rounded-md mt-6">
+        <button
+          className="px-4 py-2 text-sm bg-[#4BAF47] text-white rounded-md mt-6"
+          onClick={() => navigateTo("/the-soil-story")}
+        >
           Discover More
         </button>
       </motion.div>
