@@ -1,10 +1,8 @@
 import Logo from "../../assets/logo.png";
-import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
 import JoinWaitlist from "../Utils/JoinWaitlist";
 import { useNavigate } from "react-router-dom";
+import { SocialIcon } from "react-social-icons";
 function Navbar() {
   const SendEmail = () => {
     var subject = "Let's Connect!";
@@ -57,8 +55,11 @@ function Navbar() {
                     onClick={SendEmail}
                   >
                     {" "}
-                    <div className="glassEffect w-max p-2">
-                      <MdEmail />
+                    <div className="w-max">
+                      <SocialIcon
+                        network="email"
+                        style={{ height: 40, width: 40 }}
+                      />
                     </div>
                     <p className="text-sm">
                       EMAIL:
@@ -88,8 +89,11 @@ function Navbar() {
                       window.open("https://www.instagram.com/thesoilstory.in/")
                     }
                   >
-                    <div className="glassEffect w-max p-2">
-                      <FaInstagram />
+                    <div className="w-max">
+                      <SocialIcon
+                        network="instagram"
+                        style={{ height: 40, width: 40 }}
+                      />
                     </div>
                     <p className="text-sm">
                       INSTAGRAM:
@@ -108,8 +112,11 @@ function Navbar() {
                       )
                     }
                   >
-                    <div className="glassEffect w-max p-2">
-                      <FaLinkedin />
+                    <div className="w-max">
+                      <SocialIcon
+                        network="linkedin"
+                        style={{ height: 40, width: 40 }}
+                      />
                     </div>
                     <p className="text-sm">
                       LINKEDIN: <br />
@@ -119,7 +126,7 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            <div className="font-bold mb-7 text-xl">Recent Blogs</div>
+            {/* <div className="font-bold mb-7 text-xl">Recent Blogs</div>   */}
           </div>
         </div>
         <span className="block text-sm text-gray-300 sm:text-center  bg-transparent pb-10">

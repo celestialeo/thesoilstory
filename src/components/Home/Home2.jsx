@@ -6,7 +6,6 @@ function Home2() {
   const navigate = useNavigate();
   const navigateTo = (link) => {
     window.scrollTo(0, 0);
-
     navigate(link);
   };
   return (

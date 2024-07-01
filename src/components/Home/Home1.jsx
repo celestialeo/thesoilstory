@@ -2,6 +2,10 @@ import { useState } from "react";
 import img1 from "../../assets/homeImg1.png";
 import Header from "../Header/Header";
 import { motion } from "framer-motion";
+import { SocialIcon } from "react-social-icons";
+import { FaLink } from "react-icons/fa6";
+import { IoCloseCircleOutline } from "react-icons/io5";
+import logo from "../../assets/logo.png";
 
 function Home1() {
   // const [formData, setFormData] = useState({
@@ -15,6 +19,8 @@ function Home1() {
   //     [email]: value,
   //   }));
   // };
+  const [isDone, setIsDone] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formUrl =
@@ -29,8 +35,9 @@ function Home1() {
       body: data,
     })
       .then(() => {
-        alert("You have been added to Waitlist successfully!");
+        // alert("You have been added to Waitlist successfully!");
         // setFormData({ email: "" });
+        setIsDone(true);
       })
       .catch((error) => {
         console.error("Error submitting form:", error);
@@ -88,6 +95,57 @@ function Home1() {
           </center>
         </motion.div>
       </div>
+      {isDone === true ? (
+        <>
+          <div className="popup-main">
+            <div className="bg-white text-center p-10 rounded-3xl popup-box w-max">
+              <div
+                className="flex justify-end"
+                onClick={() => setIsDone(false)}
+              >
+                <IoCloseCircleOutline size={30} color="black" />
+              </div>
+              <center>
+                <img src={logo} />
+              </center>
+              <h1
+                className="text-[#714015] text-4xl font-bold"
+                style={{ fontFamily: "Caveat" }}
+              >
+                Yay, you’re on the waitlist!
+              </h1>
+
+              <p className="text-black">
+                Thank you for showing interest in The Soil Story. Skip ahead in
+                line by referring friends using this link below
+              </p>
+              <p>Share with friends...</p>
+              <div className="flex justify-center gap-2 mt-5">
+                <div className="glassEffect w-max p-2 shadow-inner rounded-full">
+                  <SocialIcon
+                    network="whatsapp"
+                    style={{ height: 40, width: 40 }}
+                  />
+                </div>
+                <div className="glassEffect w-max p-2 shadow-inner rounded-full">
+                  <SocialIcon
+                    network="linkedin"
+                    style={{ height: 40, width: 40 }}
+                  />{" "}
+                </div>
+                <div className="glassEffect w-max p-2 shadow-inner rounded-full">
+                  <SocialIcon network="x" style={{ height: 40, width: 40 }} />
+                </div>
+                <div className="glassEffect w-max p-2 shadow-inner rounded-full">
+                  <FaLink color="black" size={"40"} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : (
+        ""
+      )}
     </>
   );
 }

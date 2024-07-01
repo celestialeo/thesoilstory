@@ -2,9 +2,6 @@ import Header from "../Header/Header";
 import img1 from "../../assets/Contactus1.png";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
 import { SocialIcon } from "react-social-icons";
 import Navbar from "../Navbar/Navbar";
 function Contactus() {
