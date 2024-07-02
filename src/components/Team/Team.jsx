@@ -17,7 +17,7 @@ function Team() {
       tag: "Founder & Chief Executive Officer (CEO)",
       shortTag: "Founder & CEO",
       about:
-        "Sankaris the visionary behind The Soil Story. With a deep-rooted passion for sustainable agriculture and community empowerment, he founded The Soil Story to connect urban populations with the rural heart of India. Sankar holds an MSc in Innovation, Entrepreneurship, and Management from Imperial College Business School. His extensive experience in agricultural projects, including the successful Project Zaraat, has directly influenced over 3000 farmers by implementing sustainable and economically viable farming solutions. Sankar's leadership and dedication to sustainable development are the driving forces behind The Soil Story's mission.",
+        "Sankar is the visionary behind The Soil Story. With a deep-rooted passion for sustainable agriculture and community empowerment, he founded The Soil Story to connect urban populations with the rural heart of India. Sankar holds an MSc in Innovation, Entrepreneurship, and Management from Imperial College Business School. His extensive experience in agricultural projects, including the successful Project Zaraat, has directly influenced over 3000 farmers by implementing sustainable and economically viable farming solutions. Sankar's leadership and dedication to sustainable development are the driving forces behind The Soil Story's mission.",
       image: img1,
       avatar: img6,
     },
