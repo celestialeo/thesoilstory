@@ -90,7 +90,7 @@ function Team() {
                   <img
                     src={data?.image}
                     alt={data?.shortName}
-                    className="w-10 h-10 rounded-full object-cover mx-auto"
+                    className="w-20 h-20 rounded-full object-cover mx-auto"
                   />
                   <div className="font-bold mt-4">{data?.shortName}</div>
                   <div className="text-gray-600 text-sm">{data?.shortTag}</div>
