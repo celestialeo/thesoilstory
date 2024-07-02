@@ -125,18 +125,18 @@ body {
 .team-header h3 {
   font-family: 'Caveat';
   color: #4BAF47;
-  font-size: 2.25rem;
+  font-size: 2rem;
   margin-bottom: 1.25rem;
 }
 
 .team-header h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .team-header h6 {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #714015;
 }
 
