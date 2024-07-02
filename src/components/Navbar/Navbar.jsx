@@ -144,7 +144,7 @@ function Navbar() {
         </div>
         <span className="block text-sm text-gray-300 sm:text-center  bg-transparent pb-10">
           © Copyright 2024. All Rights Reserved by{" "}
-          <span className="text-white font-bold">shawonetcThemes</span>
+          <span className="text-white font-bold">TheSoilStory</span>
         </span>
       </div>
     </>
