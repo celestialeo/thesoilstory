@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
-import img3 from "../../assets/Pavani's photo.png";
+import img3 from "../../assets/Pavani.png";
 import img2 from "../../assets/Yashika.png";
-import img1 from "../../assets/Sanskarimg.png";
+import img1 from "../../assets/Sankar.png";
 
 import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
