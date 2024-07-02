@@ -7,7 +7,7 @@ import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import Navbar from "../Navbar/Navbar";
-import './src/App.css'; 
+import '../../App.css'; 
 
 function Team() {
   const TeamData = [
