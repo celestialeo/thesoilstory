@@ -4,7 +4,7 @@
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .glassEffect {
@@ -168,7 +168,6 @@ body {
   object-fit: cover;
 }
 
-/* Small images in the footer/team navigation */
 .team-footer {
   display: flex;
   justify-content: center;
