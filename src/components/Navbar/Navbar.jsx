@@ -27,20 +27,32 @@ function Navbar() {
           <div className="flex align-top justify-evenly w-full">
             <div>
               <h2 className="font-bold mb-7 text-xl">Explore</h2>
-              <p className="mb-4" onClick={() => navigateTo("/the-soil-story")}>
+              <p
+                className="mb-4 hover:cursor-pointer"
+                onClick={() => navigateTo("/the-soil-story")}
+              >
                 The Soil Story
               </p>
-              <p className="mb-4" onClick={() => navigateTo("/team")}>
+              <p
+                className="mb-4 hover:cursor-pointer"
+                onClick={() => navigateTo("/team")}
+              >
                 Our Team
               </p>
-              <p className="mb-4" onClick={() => navigateTo("/blogs")}>
+              <p
+                className="mb-4 hover:cursor-pointer"
+                onClick={() => navigateTo("/blogs")}
+              >
                 Blogs
               </p>
-              <p className="mb-4" onClick={() => navigateTo("/contact-us")}>
+              <p
+                className="mb-4 hover:cursor-pointer"
+                onClick={() => navigateTo("/contact-us")}
+              >
                 Contact Us
               </p>
               <p
-                className="mb-4"
+                className="mb-4 hover:cursor-pointer"
                 onClick={() => navigateTo("/partner-with-us")}
               >
                 Partner With Us
@@ -91,6 +103,7 @@ function Navbar() {
                   >
                     <div className="w-max">
                       <SocialIcon
+                        hover
                         network="instagram"
                         style={{ height: 40, width: 40 }}
                       />
