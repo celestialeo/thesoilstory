@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const MissionVision = () => {
   return (
     <>
-      <div className="px-32 py-32">
+      <div className="px-32 py-32 ">
         <motion.div
           className="flex gap-20 items-start"
           initial="hidden"
@@ -19,16 +19,16 @@ const MissionVision = () => {
           <img
             src={visionImage}
             alt="Our Mission"
-            className="rounded-xl w-full mb-4"
+            className="rounded-xl  w-full mb-4"
           />
           <div>
             <h2
-              className="text-5xl text-[#4BAF47] font-semibold mission-vision-header"
+              className="text-5xl text-[#4BAF47] font-semibold"
               style={{ fontFamily: "Caveat" }}
             >
               Our Mission
             </h2>
-            <p className="text-m w-[80%] mt-6 mission-vision">
+            <p className="text-m w-[80%] mt-6">
               Our mission is simple yet profound: to connect tourists with
               authentic agricultural experiences, enhance local economies, and
               help farmers realize their full potential. We aim to provide a
@@ -51,12 +51,12 @@ const MissionVision = () => {
         >
           <div>
             <h2
-              className="text-5xl text-[#4BAF47] font-semibold mission-vision-header"
+              className="text-5xl text-[#4BAF47] font-semibold"
               style={{ fontFamily: "Caveat" }}
             >
               Our Vision
             </h2>
-            <p className="text-m w-[80%] mt-6 mission-vision">
+            <p className="text-m w-[80%] mt-6">
               We envision a world where urban and rural communities coexist
               harmoniously, where the urban population appreciates and values
               the efforts of our farmers, and where farmers can thrive
@@ -77,3 +77,4 @@ const MissionVision = () => {
 };
 
 export default MissionVision;
+ 

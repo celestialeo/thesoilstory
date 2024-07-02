@@ -9,7 +9,6 @@ import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import Navbar from "../Navbar/Navbar";
-
 function Team() {
   const TeamData = [
     {
@@ -58,9 +57,9 @@ function Team() {
     <>
       <div className="w-full h-full relative">
         <Header text="white" />
-        <div className="flex justify-between px-40 items-center gap-10">
+        <div className="flex justify-between px-40  items-center gap-10">
           <button
-            className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
+            className=" hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border "
             onClick={handlePrevious}
           >
             <GoArrowLeft />
@@ -79,27 +78,31 @@ function Team() {
             <p className="w-[80%] mt-6">{TeamData[current]?.about}</p>
           </div>
           <div>
-            <img src={TeamData[current]?.image} alt={TeamData[current]?.name} />
+            <img src={TeamData[current]?.image} />
           </div>
           <button
-            className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
+            className=" hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
             onClick={handleNext}
           >
             <GoArrowRight />
           </button>
         </div>
         <div className="flex justify-start z-10 py-5 glassEffect2 absolute bottom-0 w-full rounded-none rounded-t-lg px-36 gap-14">
-          {TeamData.map((data, idx) => (
-            <div className="text-center hover:scale-[1.1]" key={idx}>
-              <img
-                src={data.avatar}
-                alt={data.shortName}
-                className="mx-auto rounded-full w-[77px]"
-              />
-              <div className="font-bold mt-4">{data.shortName}</div>
-              <div className="text-gray-600 text-sm">{data.shortTag}</div>
-            </div>
-          ))}
+          {TeamData?.map((data, idx) => {
+            return (
+              <>
+                <div className="text-center hover:scale-[1.1] " key={idx}>
+                  <img
+                    src={data?.avatar}
+                    alt={data?.shortName}
+                    className="mx-auto rounded-full w-[77px]"
+                  />
+                  <div className="font-bold mt-4">{data?.shortName}</div>
+                  <div className="text-gray-600 text-sm">{data?.shortTag}</div>
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
       <Navbar />
@@ -108,3 +111,4 @@ function Team() {
 }
 
 export default Team;
+ 
