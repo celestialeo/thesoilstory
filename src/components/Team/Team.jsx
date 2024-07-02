@@ -53,25 +53,37 @@ function Team() {
     <>
       <div className="w-full h-full relative">
         <Header text="white" />
-        <div className="flex justify-between px-40 items-center gap-10">
-          <button
-            className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
-            onClick={handlePrevious}
-          >
-            <GoArrowLeft />
-          </button>
-          <div className="w-full mt-[-10%]">
-            <h3
-              style={{ fontFamily: "Caveat" }}
-              className="text-[#4BAF47] text-4xl mb-5"
+        <div className="flex flex-col justify-between items-center gap-10 px-40">
+          <div className="flex justify-between items-center w-full">
+            <button
+              className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
+              onClick={handlePrevious}
             >
-              Our Team
-            </h3>
-            <h1 className="text-6xl font-semibold mb-2">
-              {TeamData[current]?.name}
-            </h1>
-            <h6 className="text-sm text-[#714015]">{TeamData[current]?.tag}</h6>
-            <p className="w-[80%] mt-6">{TeamData[current]?.about}</p>
+              <GoArrowLeft />
+            </button>
+            <div className="flex-1 flex flex-col items-center">
+              <h3
+                style={{ fontFamily: "Caveat" }}
+                className="text-[#4BAF47] text-4xl mb-5"
+              >
+                Our Team
+              </h3>
+              <h1 className="text-6xl font-semibold mb-2 text-center">
+                {TeamData[current]?.name}
+              </h1>
+              <h6 className="text-sm text-[#714015] text-center">
+                {TeamData[current]?.tag}
+              </h6>
+              <p className="w-[80%] mt-6 text-center">
+                {TeamData[current]?.about}
+              </p>
+            </div>
+            <button
+              className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
+              onClick={handleNext}
+            >
+              <GoArrowRight />
+            </button>
           </div>
           <div>
             <img
@@ -79,14 +91,8 @@ function Team() {
               className="w-40 h-40 rounded-full object-cover"
             />
           </div>
-          <button
-            className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
-            onClick={handleNext}
-          >
-            <GoArrowRight />
-          </button>
         </div>
-        <div className="flex justify-start z-10 py-5 glassEffect2 absolute bottom-0 w-full rounded-none rounded-t-lg px-36 gap-14">
+        <div className="flex justify-center z-10 py-5 glassEffect2 absolute bottom-0 w-full rounded-none rounded-t-lg px-36 gap-14">
           {TeamData?.map((data, idx) => {
             return (
               <div className="text-center hover:scale-[1.1]" key={idx}>
