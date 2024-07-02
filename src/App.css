@@ -1,75 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
+  font-size: 1rem;
 }
+
 .glassEffect {
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.3125rem);
+  -webkit-backdrop-filter: blur(0.3125rem);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
 }
+
 .glassEffect2 {
   background: rgba(165, 165, 165, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(165, 165, 165, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.3125rem);
+  -webkit-backdrop-filter: blur(0.3125rem);
+  border: 0.0625rem solid rgba(165, 165, 165, 0.3);
 }
+
 .footerImage {
-  background-color: #4baf47; /*Default bg, similar to the background's base color*/
+  background-color: #4baf47;
   background-image: url("./assets/footer-image-1.png");
-  background-position: right bottom; /*Positioning*/
-  background-repeat: no-repeat; /*Prevent showing multiple background images*/
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
+
 .home3 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
 }
+
 .carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
-  padding: 20px;
+  width: 100%;
+  max-width: 18.75rem;
+  padding: 1.25rem;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .testimonial {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .testimonial__image {
-  width: 100px;
-  height: 100px;
+  width: 6.25rem;
+  height: 6.25rem;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .testimonial__name {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
 .testimonial__age {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   color: #888;
 }
 
 .testimonial__text {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: #555;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .carousel__controls {
@@ -81,7 +89,7 @@ body {
 .carousel__control {
   background: none;
   border: none;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   cursor: pointer;
   color: #888;
 }
@@ -91,45 +99,50 @@ body {
 }
 
 .popup-main {
-  /* width: 100vw; */
   height: 100%;
   top: 0;
   position: absolute;
   z-index: 100;
 }
+
 .popup-main:target {
   visibility: visible;
   display: block;
 }
+
 .popup-box {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgb(38, 57, 77) 0 1.25rem 1.875rem -0.625rem;
 }
 
 .team-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2.5rem;
-  padding: 0 5rem;
+  padding: 0 1.5rem;
 }
 
 .team-header {
   flex: 1;
+  text-align: center;
+  margin-bottom: 5rem; /* Added margin to push footer down */
 }
 
 .team-header h3 {
   font-family: 'Caveat';
   color: #4BAF47;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1.25rem;
+  margin-top: -80px; /* Added negative margin to move up */
 }
 
 .team-header h1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -140,11 +153,35 @@ body {
 }
 
 .team-header p {
-  width: 80%;
+  font-size: 1rem;
+  width: 100%;
   margin-top: 1.5rem;
 }
 
-/* Ensure the main image is circular */
+@media (min-width: 768px) {
+  .team-container {
+    flex-direction: row;
+    padding: 0 5rem;
+  }
+
+  .team-header {
+    text-align: left;
+    margin-bottom: 0; /* Reset margin for larger screens */
+  }
+
+  .team-header h3 {
+    font-size: 2rem;
+  }
+
+  .team-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .team-header p {
+    width: 80%;
+  }
+}
+
 .team-image-container {
   display: flex;
   justify-content: center;
@@ -159,18 +196,18 @@ body {
   object-fit: cover;
 }
 
-/* Small images in the footer/team navigation */
 .team-footer {
   display: flex;
   justify-content: center;
   z-index: 10;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(0.3125rem);
   background: rgba(165, 165, 165, 0.2);
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  gap: 3.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .team-footer img {
