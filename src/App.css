@@ -125,12 +125,12 @@ body {
 .team-header h3 {
   font-family: 'Caveat';
   color: #4BAF47;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1.25rem;
 }
 
 .team-header h1 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -143,6 +143,7 @@ body {
 .team-header p {
   width: 80%;
   margin-top: 1.5rem;
+  font-size: 1rem;
 }
 
 /* Ensure the main image is circular */
@@ -199,5 +200,5 @@ body {
 
 .team-footer .text-gray-600 {
   color: #718096;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
