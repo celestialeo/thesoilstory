@@ -109,3 +109,93 @@ body {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+.team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.team-header {
+  text-align: center;
+}
+
+.team-header h3 {
+  font-family: 'Caveat';
+  color: #4BAF47;
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.team-header h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.team-header h6 {
+  font-size: 0.875rem;
+  color: #714015;
+}
+
+.team-header p {
+  width: 80%;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure the main image is circular */
+.team-image {
+  margin-top: 2rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small images in the footer/team navigation */
+.team-footer {
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  backdrop-filter: blur(5px);
+  background: rgba(165, 165, 165, 0.2);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  gap: 3.5rem;
+}
+
+.team-footer img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-footer div {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-footer div:hover {
+  transform: scale(1.1);
+}
+
+.team-footer .font-bold {
+  margin-top: 1rem;
+}
+
+.team-footer .text-gray-600 {
+  color: #718096;
+  font-size: 0.875rem;
+}

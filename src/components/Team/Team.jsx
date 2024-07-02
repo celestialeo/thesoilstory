@@ -7,6 +7,8 @@ import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import Navbar from "../Navbar/Navbar";
+import './app.css'; // Import your CSS file
+
 function Team() {
   const TeamData = [
     {
@@ -52,50 +54,49 @@ function Team() {
     <>
       <div className="w-full h-full relative">
         <Header text="white" />
-        <div className="flex justify-between px-40  items-center gap-10">
-          <button
-            className=" hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border "
-            onClick={handlePrevious}
-          >
-            <GoArrowLeft />
-          </button>
-          <div className="w-full mt-[-10%]">
-            <h3
-              style={{ fontFamily: "Caveat" }}
-              className="text-[#4BAF47] text-4xl mb-5"
+        <div className="team-container">
+          <div className="flex justify-between items-center w-full">
+            <button
+              className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
+              onClick={handlePrevious}
             >
-              Our Team
-            </h3>
-            <h1 className="text-6xl font-semibold mb-2">
-              {TeamData[current]?.name}
-            </h1>
-            <h6 className="text-sm text-[#714015]">{TeamData[current]?.tag}</h6>
-            <p className="w-[80%] mt-6">{TeamData[current]?.about}</p>
+              <GoArrowLeft />
+            </button>
+            <div className="flex-1 text-center">
+              <div className="team-header">
+                <h3>Our Team</h3>
+                <h1>{TeamData[current]?.name}</h1>
+                <h6>{TeamData[current]?.tag}</h6>
+                <p>{TeamData[current]?.about}</p>
+              </div>
+              <div className="mt-8">
+                <img
+                  src={TeamData[current]?.image}
+                  className="team-image"
+                  alt={TeamData[current]?.name}
+                />
+              </div>
+            </div>
+            <button
+              className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
+              onClick={handleNext}
+            >
+              <GoArrowRight />
+            </button>
           </div>
-          <div>
-            <img src={TeamData[current]?.image} />
-          </div>
-          <button
-            className=" hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
-            onClick={handleNext}
-          >
-            <GoArrowRight />
-          </button>
         </div>
-        <div className="flex justify-start z-10 py-5 glassEffect2 absolute bottom-0 w-full rounded-none rounded-t-lg px-36 gap-14">
+        <div className="team-footer">
           {TeamData?.map((data, idx) => {
             return (
-              <>
-                <div className="text-center hover:scale-[1.1]" key={idx}>
-                  <img
-                    src={data?.image}
-                    alt={data?.shortName}
-                    className="w-20 h-20 rounded-full object-cover mx-auto"
-                  />
-                  <div className="font-bold mt-4">{data?.shortName}</div>
-                  <div className="text-gray-600 text-sm">{data?.shortTag}</div>
-                </div>
-              </>
+              <div className="text-center" key={idx}>
+                <img
+                  src={data?.image}
+                  alt={data?.shortName}
+                  className="w-20 h-20 rounded-full object-cover mx-auto"
+                />
+                <div className="font-bold mt-4">{data?.shortName}</div>
+                <div className="text-gray-600 text-sm">{data?.shortTag}</div>
+              </div>
             );
           })}
         </div>
