@@ -7,6 +7,7 @@ import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import Navbar from "../Navbar/Navbar";
+
 function Team() {
   const TeamData = [
     {
@@ -73,7 +74,7 @@ function Team() {
             <p className="w-[80%] mt-6">{TeamData[current]?.about}</p>
           </div>
           <div>
-            <img src={TeamData[current]?.image} />
+            <img src={TeamData[current]?.image} className="w-40 h-40 rounded-full object-cover" />
           </div>
           <button
             className=" hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
