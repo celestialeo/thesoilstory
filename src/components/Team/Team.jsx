@@ -55,35 +55,31 @@ function Team() {
       <div className="w-full h-full relative">
         <Header text="white" />
         <div className="team-container">
-          <div className="flex justify-between items-center w-full">
-            <button
-              className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
-              onClick={handlePrevious}
-            >
-              <GoArrowLeft />
-            </button>
-            <div className="flex-1 text-center">
-              <div className="team-header">
-                <h3>Our Team</h3>
-                <h1>{TeamData[current]?.name}</h1>
-                <h6>{TeamData[current]?.tag}</h6>
-                <p>{TeamData[current]?.about}</p>
-              </div>
-              <div className="mt-8">
-                <img
-                  src={TeamData[current]?.image}
-                  className="team-image"
-                  alt={TeamData[current]?.name}
-                />
-              </div>
-            </div>
-            <button
-              className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
-              onClick={handleNext}
-            >
-              <GoArrowRight />
-            </button>
+          <button
+            className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
+            onClick={handlePrevious}
+          >
+            <GoArrowLeft />
+          </button>
+          <div className="flex-1 team-header">
+            <h3>Our Team</h3>
+            <h1>{TeamData[current]?.name}</h1>
+            <h6>{TeamData[current]?.tag}</h6>
+            <p>{TeamData[current]?.about}</p>
           </div>
+          <div className="team-image-container">
+            <img
+              src={TeamData[current]?.image}
+              className="team-image"
+              alt={TeamData[current]?.name}
+            />
+          </div>
+          <button
+            className="hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
+            onClick={handleNext}
+          >
+            <GoArrowRight />
+          </button>
         </div>
         <div className="team-footer">
           {TeamData?.map((data, idx) => {

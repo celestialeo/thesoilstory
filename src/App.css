@@ -111,15 +111,15 @@ body {
 
 .team-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
   gap: 2.5rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding: 0 5rem;
 }
 
 .team-header {
-  text-align: center;
+  flex: 1;
 }
 
 .team-header h3 {
@@ -143,19 +143,20 @@ body {
 .team-header p {
   width: 80%;
   margin-top: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Ensure the main image is circular */
+.team-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .team-image {
-  margin-top: 2rem;
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 9999px;
   object-fit: cover;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Small images in the footer/team navigation */
