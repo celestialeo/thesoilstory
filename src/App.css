@@ -111,9 +111,8 @@ body {
 
 .team-container {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: flex-start;
-  justify-content: center;
   gap: 2.5rem;
   padding: 0 5rem;
 }
@@ -150,12 +149,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
 }
 
 .team-image {
   width: 15rem;
   height: 15rem;
-  border-radius: 9999px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
