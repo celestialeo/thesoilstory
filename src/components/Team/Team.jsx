@@ -12,7 +12,7 @@ import Navbar from "../Navbar/Navbar";
 function Team() {
   const TeamData = [
     {
-      name: "Sankar Venkataraman Murali",
+      name: "Sankar V Murali",
       shortName: "Sankar V Murali",
       tag: "Founder & Chief Executive Officer (CEO)",
       shortTag: "Founder & CEO",
