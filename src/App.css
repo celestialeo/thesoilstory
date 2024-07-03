@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
 html {
-  font-size: 90%; /* Default font size for scaling */
+  font-size: 91%; /* Default font size for scaling */
 }
 
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  font-size: 0.79rem;
+  font-size: 0.8rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

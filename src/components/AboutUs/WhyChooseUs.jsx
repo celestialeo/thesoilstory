@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
       <div className="flex px-32 mb-20">
         <div className=" w-[90%]">
           <motion.h2
-            className="text-4xl font-bold mb-14"
+            className="text-4xl font-bold mb-12"
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 1.6 }}

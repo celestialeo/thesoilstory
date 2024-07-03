@@ -61,10 +61,10 @@ function Home1() {
             hidden: { opacity: 0, x: 0 },
           }}
         >
-          <h1 className="font-extrabold text-6xl text-white mt-32">
+          <h1 className="font-extrabold text-6xl text-white mt-34">
             Reset your Weekends
           </h1>
-          <h1 className="font-semibold text-6xl text-white mt-4">
+          <h1 className="font-semibold text-6xl text-white mt-3">
             Escape to Rural Bliss!
           </h1>
           <h2
@@ -75,7 +75,7 @@ function Home1() {
           </h2>
           <center>
             <form onSubmit={handleSubmit}>
-              <div className="bg-transparent rounded-full w-[450px] py-1 px-2 flex justify-between mt-5 ps-5 border-white border-2">
+              <div className="bg-transparent rounded-full w-[450px] py-1 px-2 flex justify-between mt-7 ps-5 border-white border-2">
                 <input
                   placeholder=" Email*"
                   className=" rounded-full p-1 bg-transparent text-white border-0 focus:outline-none"
