@@ -91,7 +91,11 @@ function Team() {
           {TeamData?.map((data, idx) => {
             return (
               <>
-                <div className="text-center hover:scale-[1.1] " key={idx}>
+                <div
+                  className="text-center hover:scale-[1.1] hover:cursor-pointer"
+                  key={idx}
+                  onClick={() => setCurrent(idx)}
+                >
                   <img
                     src={data?.avatar}
                     alt={data?.shortName}
