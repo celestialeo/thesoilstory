@@ -127,7 +127,7 @@ const Home3 = () => {
   };
   return (
     <>
-      <center>
+      <center className="scale-50 md:scale-100 lg:scale-100">
         <h2
           style={{ fontFamily: "Caveat" }}
           className="text-[#4BAF47] text-4xl"
@@ -152,7 +152,7 @@ const Home3 = () => {
           />
         </div>
       </center>
-      <div className="flex justify-center gap-6 w-full mt-[450px] z-10">
+      <div className="flex justify-center gap-6 w-full mt-[-50px] md:mt-[450px] lg:mt-[450px] z-10">
         <button
           className=" hover:bg-gray-400 text-gray-800 font-bold rounded-full p-1 border"
           onClick={handlePrevious}

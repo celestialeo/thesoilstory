@@ -60,7 +60,7 @@ function Home1() {
       >
         <Header />
         <motion.div
-          className="text-center p-20 h-[100vh]"
+          className="text-center p-5 h-[70vh] md:h-[100vh] lg:h-[100vh] md:p-20 lg:p-20"
           whileInView="visible"
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -70,21 +70,21 @@ function Home1() {
             hidden: { opacity: 0, x: 0 },
           }}
         >
-          <h1 className="font-extrabold text-6xl text-white mt-32">
+          <h1 className="font-extrabold text-white mt-32 md:text-6xl lg:text-6xl text-2xl">
             Reset your Weekends
           </h1>
-          <h1 className="font-semibold text-6xl text-white mt-4">
+          <h1 className="font-semibold md:text-6xl lg:text-6xl text-2xl text-white mt-4">
             Escape to Rural Bliss!
           </h1>
           <h2
-            className="text-5xl text-white mt-6"
+            className="text-white mt-6 md:text-5xl lg:text-6xl text-2xl"
             style={{ fontFamily: "Caveat" }}
           >
             Launching Soon!
           </h2>
           <center>
             <form onSubmit={handleSubmit}>
-              <div className="bg-transparent rounded-full w-[450px] py-1 px-2 flex justify-between mt-5 ps-5 border-white border-2">
+              <div className="bg-transparent rounded-full w-[350px] md:w-[450px] lg:w-[450px] py-1 px-2 flex justify-between mt-5 ps-5 border-white border-2">
                 <input
                   placeholder=" Email*"
                   className=" rounded-full p-1 bg-transparent text-white border-0 focus:outline-none"
@@ -94,7 +94,7 @@ function Home1() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <button
-                  className="py-2 px-3 rounded-full text-black bg-white text-sm font-semibold"
+                  className="py-1 px-1 md:py-2 md:px-3 lg:py-2 lg:px-3 rounded-full text-black bg-white text-sm font-semibold"
                   type="submit"
                 >
                   Join Waitlist &gt;

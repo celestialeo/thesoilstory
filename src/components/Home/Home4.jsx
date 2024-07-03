@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 function Home4() {
   const PartnerImg = [img1, img2, img3];
   return (
-    <div className="mb-20">
-      <h1 className="font-semibold text-5xl mt-20 mb-20 text-center ">
+    <div className="mb-20 sm:flex sm:flex-col sm:justify-center sm:items-center">
+      <h1 className="font-semibold text-xl mt-20 mb-20 text-center md:text-5xl lg:text-5xl">
         Our Partners
       </h1>
       <motion.div
-        className="flex justify-between px-20 items-center "
+        className="flex flex-col md:flex-row lg:flex-row gap-10 justify-between px-20 items-center sm:w-[70%] "
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 1, ease: "linear" }}
@@ -23,7 +23,7 @@ function Home4() {
         {PartnerImg.map((img, index) => {
           return (
             <>
-              <img src={img} key={index} className="h-min" />
+              <img src={img} key={index} className="h-min " />
             </>
           );
         })}
