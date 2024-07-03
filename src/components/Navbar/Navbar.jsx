@@ -20,7 +20,12 @@ function Navbar() {
       <div className="footerImage">
         <div className="bg-transparent flex justify-start gap-20 items-center p-16 px-28 text-white">
           <div>
-            <img src={Logo} alt="logo" />
+            <img
+              src={Logo}
+              alt="logo"
+              onClick={() => navigateTo("/")}
+              className="hover:cursor-pointer"
+            />
             <p>Join the Waitlist! Experience something awesome</p>
             <JoinWaitlist btncolor="#FAB917" />
           </div>

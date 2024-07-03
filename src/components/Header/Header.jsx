@@ -20,10 +20,15 @@ function Header(props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
-      <img src={Logo} alt="Logo" className="bg-transparent h-24 w-24" />
+      <img
+        src={Logo}
+        alt="Logo"
+        className="bg-transparent h-24 w-24 hover:cursor-pointer"
+        onClick={() => navigateTo("/")}
+      />
       <div
         className={
-          props?.text === "white" 
+          props?.text === "white"
             ? "flex gap-10 text-black"
             : "flex gap-10 text-white"
         }
