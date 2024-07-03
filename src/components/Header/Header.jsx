@@ -43,7 +43,7 @@ function Header(props) {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } flex-col gap-4 absolute top-16 left-0 w-[50%] bg-gray-800 p-6 md:flex md:flex-row md:static md:w-auto md:bg-transparent md:gap-10 lg:flex lg:flex-row lg:static lg:w-auto lg:bg-transparent lg:gap-10 ${
+        } flex-col gap-4 absolute top-16 right-0 w-[50%] bg-gray-500 rounded-lg p-6 md:flex md:flex-row md:static md:w-auto md:bg-transparent md:gap-10 lg:flex lg:flex-row lg:static lg:w-auto lg:bg-transparent lg:gap-10 ${
           props?.text === "white" ? "text-black" : "text-white"
         }`}
       >
