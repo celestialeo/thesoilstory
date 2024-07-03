@@ -41,7 +41,7 @@ const WhatWeOffer = () => (
       style={{ backgroundImage: `url(${bgimg})` }}
       className="bg-no-repeat bg-cover p-16 mt-32 "
     >
-      <div className="h-[100vh]">
+      <div className="h-[100vh] ">
         <center>
           <h3 className="text-3xl text-white" style={{ fontFamily: "Caveat" }}>
             Our services
@@ -58,7 +58,7 @@ const WhatWeOffer = () => (
               hidden: { opacity: 0, scale: 0.7 },
             }}
           >
-            <div className="mt-10 flex flex-wrap gap-8 justify-center">
+            <div className="mt-10 flex flex-wrap gap-8 justify-center h-[70vh] md:h-auto lg:h-auto overflow-y-scroll md:overflow-hidden lg:overflow-hidden">
               {services.map((service, idx) => (
                 <div
                   className="p-6 px-10 bg-white shadow-lg rounded-lg w-full sm:w-1/2 lg:w-1/4"

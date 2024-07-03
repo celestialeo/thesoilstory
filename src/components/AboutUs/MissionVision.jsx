@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const MissionVision = () => {
   return (
     <>
-      <div className="px-32 py-32 ">
+      <div className="px-5 py-5 md:px-32 md:py-32 lg:px-32 lg:py-32">
         <motion.div
           className="flex gap-20 items-start"
           initial="hidden"
@@ -19,7 +19,7 @@ const MissionVision = () => {
           <img
             src={visionImage}
             alt="Our Mission"
-            className="rounded-xl  w-full mb-4"
+            className="rounded-xl w-full mb-4 hidden md:block lg:block"
           />
           <div>
             <h2
@@ -68,7 +68,7 @@ const MissionVision = () => {
           <img
             src={missionImage}
             alt="Our Vision"
-            className="rounded-xl w-full mb-4"
+            className="rounded-xl w-full mb-4 hidden md:block lg:block"
           />
         </motion.div>
       </div>
