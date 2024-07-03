@@ -39,7 +39,7 @@ const WhatWeOffer = () => (
   <div className="">
     <div
       style={{ backgroundImage: `url(${bgimg})` }}
-      className="bg-no-repeat bg-cover p-16 mt-32 "
+      className="bg-no-repeat bg-cover p-10 mt-32 "
     >
       <div className="h-[100vh] ">
         <center>
@@ -58,15 +58,17 @@ const WhatWeOffer = () => (
               hidden: { opacity: 0, scale: 0.7 },
             }}
           >
-            <div className="mt-10 flex flex-wrap gap-8 justify-center h-[70vh] md:h-auto lg:h-auto overflow-y-scroll md:overflow-hidden lg:overflow-hidden">
+            <div className="mt-5 flex flex-wrap gap-8 justify-center h-[70vh] md:h-auto lg:h-auto overflow-y-scroll md:overflow-hidden lg:overflow-hidden">
               {services.map((service, idx) => (
                 <div
-                  className="p-6 px-10 bg-white shadow-lg rounded-lg w-full sm:w-1/2 lg:w-1/4"
+                  className="p-4 px-10 bg-white shadow-lg rounded-lg w-full sm:w-1/2 lg:w-1/4"
                   key={idx}
                 >
                   <div className="text-3xl">{service.icon}</div>
-                  <h3 className="mt-4 text-xl font-bold">{service.title}</h3>
-                  <p className="mt-2 text-gray-600">{service.description}</p>
+                  <h3 className="mt-4 text-base font-bold">{service.title}</h3>
+                  <p className="mt-2 text-xs text-gray-600">
+                    {service.description}
+                  </p>
                 </div>
               ))}
             </div>
