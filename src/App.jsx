@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Analytics } from "@vercel/analytics/react"; // Import the Analytics component
+import { Analytics } from "@vercel/analytics/react"; 
+import { SpeedInsights } from "@vercel/speed-insights/react"; 
 import HomePage from "./components/Home/HomePage";
 import Contactus from "./components/ContactUs/Contactus";
 import Team from "./components/Team/Team";
