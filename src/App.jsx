@@ -14,8 +14,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Analytics /> {/* Add the Analytics component */}
-        <SpeedInsights> {/* Wrap the main content with SpeedInsights */}
+        <Analytics />
+        <SpeedInsights>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact-us" element={<Contactus />} />
