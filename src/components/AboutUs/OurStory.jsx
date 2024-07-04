@@ -48,7 +48,7 @@ function OurStory() {
           hidden: { opacity: 0, y: 50 },
         }}
       >
-        <img src={about0} alt="bg" />
+        <img src={about0} alt="bg" className="px-5 md:px-0 lg:px-0" />
       </motion.center>
     </>
   );

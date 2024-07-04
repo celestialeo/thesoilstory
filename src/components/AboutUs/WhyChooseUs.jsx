@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
 
   return (
     <>
-      <div className="flex px-32 mb-20">
+      <div className="flex  mb-20 px-5 py-5 md:px-32  lg:px-32 ">
         <div className=" w-[90%]">
           <motion.h2
             className="text-4xl font-bold mb-12"
@@ -41,7 +41,7 @@ const WhyChooseUs = () => {
             return (
               <>
                 <motion.div
-                  className="flex gap-5   mb-8 items-start"
+                  className="flex gap-5 mb-8 items-start"
                   key={idx}
                   initial="hidden"
                   whileInView="visible"
@@ -59,8 +59,12 @@ const WhyChooseUs = () => {
                     <IoCheckmark color="white" size={30} />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold">{info.title}</h3>
-                    <p className="text-lg mt-2  w-[90%]">{info.desc}</p>
+                    <h3 className="text-base md:text-2xl lg:text-2xl font-bold">
+                      {info.title}
+                    </h3>
+                    <p className="text-xs md:text-lg lg:text-lg mt-2  w-[90%]">
+                      {info.desc}
+                    </p>
                   </div>
                 </motion.div>
               </>
@@ -80,7 +84,7 @@ const WhyChooseUs = () => {
           <img
             src={backgroundImage}
             alt="Why Choose Us"
-            className="rounded-lg shadow-lg w-full"
+            className="rounded-lg shadow-lg w-full hidden md:block lg:block"
           />
         </motion.div>
       </div>

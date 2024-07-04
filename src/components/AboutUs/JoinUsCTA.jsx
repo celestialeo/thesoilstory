@@ -18,7 +18,7 @@ const JoinUsCTA = () => {
       >
         <div>
           <motion.h2
-            className="text-7xl text-white font-semibold mb-5"
+            className="md:text-7xl lg:text-7xl text-2xl  text-white font-semibold mb-5"
             style={{ fontFamily: "Caveat" }}
             initial="hidden"
             whileInView="visible"
@@ -31,7 +31,7 @@ const JoinUsCTA = () => {
             Join Us on This Journey
           </motion.h2>
           <motion.p
-            className="text-white mb-8 max-w-2xl"
+            className="text-white mb-8 max-w-2xl text-xs md:text-base lg:text-base px-5 md:px-auto lg:px-auto"
             initial="hidden"
             whileInView="visible"
             transition={{ duration: 0.8, ease: "linear" }}

@@ -20,9 +20,18 @@ function Home1() {
   //   }));
   // };
   const [isDone, setIsDone] = useState(false);
-
+  const [copyStatus, setCopyStatus] = useState("Click to Copy!");
+  const SendEmail = () => {
+    var subject = "Let's Connect!";
+    var body = "Hello,I'm [Your Name]!,would love to have chat with you!";
+    window.location.href = `mailto:contact@thesoilstory.in?subject=${subject}&body=${body}`;
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (Email === "") {
+      alert("Please Add Email!");
+      return;
+    }
     const formUrl =
       "https://docs.google.com/forms/u/1/d/e/1FAIpQLSd9nF7rSOwEpXqvL9SkkKDFgKEJkZSJtlVDwP4OdBQ7mnA9gQ/formResponse";
     const data = new FormData();
@@ -51,7 +60,7 @@ function Home1() {
       >
         <Header />
         <motion.div
-          className="text-center p-20 h-[100vh]"
+          className="text-center p-5 h-[70vh] md:h-[100vh] lg:h-[100vh] md:p-20 lg:p-20"
           whileInView="visible"
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -61,21 +70,32 @@ function Home1() {
             hidden: { opacity: 0, x: 0 },
           }}
         >
+<<<<<<< HEAD
           <h1 className="font-extrabold text-6xl text-white mt-34">
             Reset your Weekends
           </h1>
           <h1 className="font-semibold text-6xl text-white mt-3">
+=======
+          <h1 className="font-extrabold text-white mt-32 md:text-6xl lg:text-6xl text-2xl">
+            Reset your Weekends
+          </h1>
+          <h1 className="font-semibold md:text-6xl lg:text-6xl text-2xl text-white mt-4">
+>>>>>>> soilstoryv2
             Escape to Rural Bliss!
           </h1>
           <h2
-            className="text-5xl text-white mt-6"
+            className="text-white mt-6 md:text-5xl lg:text-6xl text-2xl"
             style={{ fontFamily: "Caveat" }}
           >
             Launching Soon!
           </h2>
           <center>
             <form onSubmit={handleSubmit}>
+<<<<<<< HEAD
               <div className="bg-transparent rounded-full w-[450px] py-1 px-2 flex justify-between mt-7 ps-5 border-white border-2">
+=======
+              <div className="bg-transparent rounded-full w-[350px] md:w-[450px] lg:w-[450px] py-1 px-2 flex justify-between mt-5 ps-5 border-white border-2">
+>>>>>>> soilstoryv2
                 <input
                   placeholder=" Email*"
                   className=" rounded-full p-1 bg-transparent text-white border-0 focus:outline-none"
@@ -85,7 +105,7 @@ function Home1() {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <button
-                  className="py-2 px-3 rounded-full text-black bg-white text-sm font-semibold"
+                  className="py-1 px-1 md:py-2 md:px-3 lg:py-2 lg:px-3 rounded-full text-black bg-white text-sm font-semibold"
                   type="submit"
                 >
                   Join Waitlist &gt;
@@ -100,7 +120,7 @@ function Home1() {
           <div className="popup-main">
             <div className="bg-white text-center p-10 rounded-3xl popup-box w-max">
               <div
-                className="flex justify-end"
+                className="flex justify-end hover:cursor-pointer"
                 onClick={() => setIsDone(false)}
               >
                 <IoCloseCircleOutline size={30} color="black" />
@@ -121,23 +141,51 @@ function Home1() {
               </p>
               <p>Share with friends...</p>
               <div className="flex justify-center gap-2 mt-5">
-                <div className="glassEffect w-max p-2 shadow-inner rounded-full">
+                <div className="glassEffect w-max p-2 shadow-inner rounded-full hover:cursor-pointer">
                   <SocialIcon
-                    network="whatsapp"
+                    network="email"
                     style={{ height: 40, width: 40 }}
+                    onClick={SendEmail}
                   />
                 </div>
-                <div className="glassEffect w-max p-2 shadow-inner rounded-full">
+                <div className="glassEffect w-max p-2 shadow-inner rounded-full hover:cursor-pointer">
                   <SocialIcon
                     network="linkedin"
                     style={{ height: 40, width: 40 }}
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/company/thesoilstory/"
+                      )
+                    }
                   />{" "}
                 </div>
-                <div className="glassEffect w-max p-2 shadow-inner rounded-full">
-                  <SocialIcon network="x" style={{ height: 40, width: 40 }} />
+                <div className="glassEffect w-max p-2 shadow-inner rounded-full hover:cursor-pointer">
+                  <SocialIcon
+                    network="instagram"
+                    style={{ height: 40, width: 40 }}
+                    onClick={() =>
+                      window.open("https://www.instagram.com/thesoilstory.in/")
+                    }
+                  />
                 </div>
                 <div className="glassEffect w-max p-2 shadow-inner rounded-full">
-                  <FaLink color="black" size={"40"} />
+                  <div className="group relative flex justify-center">
+                    <button className="rounded text-sm text-white shadow-sm">
+                      <FaLink
+                        color="black"
+                        size={"40"}
+                        onClick={() => {
+                          navigator.clipboard.writeText(
+                            "https://www.thesoilstory.in/"
+                          );
+                          setCopyStatus("Copied!");
+                        }}
+                      />
+                    </button>
+                    <span className="absolute top-10 scale-0 rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">
+                      {copyStatus}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

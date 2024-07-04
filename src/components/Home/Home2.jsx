@@ -9,9 +9,9 @@ function Home2() {
     navigate(link);
   };
   return (
-    <div className="py-10 px-20 flex justify-center">
+    <div className="py-10 px-20 flex flex-col md:flex-row justify-center">
       <motion.div
-        className="w-[50%]"
+        className="w-[100%] lg:w-[50%] md:w-[50%]"
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 1 }}
@@ -22,12 +22,14 @@ function Home2() {
       >
         <h2
           style={{ fontFamily: "Caveat" }}
-          className="text-[#4BAF47] text-4xl"
+          className="text-[#4BAF47] text-xl md:text-4xl lg:text-4xl"
         >
           About Us
         </h2>
-        <h1 className="font-semibold text-5xl mt-2">Get to know us</h1>
-        <p className="w-[70%] mt-7">
+        <h1 className="font-semibold text-xl md:text-5xl lg:text-5xl mt-2">
+          Get to know us
+        </h1>
+        <p className="w-[100%] lg:w-[70%] md:w-[70%] mt-7 text-xs md:text-base lg:text-base">
           Welcome to The Soil Story, where your weekends get a rustic twist!
           We&apos;re all about swapping city chaos for farm-fresh fun. From
           milking cows to picking strawberries, we connect you with real farm
@@ -43,7 +45,7 @@ function Home2() {
         </button>
       </motion.div>
       <motion.div
-        className="w-[40%] text-start"
+        className="w-[40%] text-start hidden lg:block md:block"
         initial="hidden"
         whileInView="visible"
         transition={{ duration: 1 }}

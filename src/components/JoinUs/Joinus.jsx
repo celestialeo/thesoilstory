@@ -73,14 +73,14 @@ function Joinus() {
   return (
     <>
       <Header text={"white"} />
-      <div className="px-20 py-10 w-full flex justify-center">
+      <div className="md:px-20 lg:md:px-20 px-5 py-10 w-full flex justify-center">
         <div
           style={{ backgroundImage: `url(${img1})` }}
-          className="bg-no-repeat bg-cover flex px-20 py-16 w-[90%] rounded-3xl"
+          className="bg-no-repeat bg-cover flex md:px-20 lg:md:px-20 px-10 py-16 w-[90%] rounded-3xl"
         >
-          <div className="flex-row flex flex-wrap justify-start p-0 text-white">
+          <div className="flex-row flex flex-wrap justify-start p-0 text-white gap-7">
             <h1 className="text-4xl font-bold">How to become a Partner</h1>
-            <p className="w-[70%]">
+            <p className="md:w-[70%] lg:w-[70%]">
               The Soil Story is on a mission to bridge the gap between urban and
               rural communities by promoting sustainable and authentic farm
               experiences. We are looking for passionate farmers and
@@ -103,6 +103,7 @@ function Joinus() {
               visible: { opacity: 1 },
               hidden: { opacity: 0 },
             }}
+            className="hidden md:block lg:block"
           />
         </div>
       </div>
@@ -110,7 +111,7 @@ function Joinus() {
         <h1 className="text-center text-4xl font-semibold my-20">
           Why Partner with us?
         </h1>
-        <div className="mx-auto flex flex-wrap justify-around px-40 ">
+        <div className="mx-auto flex flex-wrap flex-col md:flex-row lg:flex-row justify-around md:px-40 lg:md:px-40 px-10 ">
           {data.map((x, idx) => {
             {
               return (
@@ -154,7 +155,7 @@ function Joinus() {
       <h1 className="text-4xl font-bold my-14 text-center">
         How to Become a Partner
       </h1>
-      <div className="container mx-auto p-4 px-48">
+      <div className="container mx-auto p-4 md:px-48 lg:md:px-48 px-10">
         <div className="relative flex justify-around items-start mt-10">
           {steps.map((step) => (
             <>
@@ -208,7 +209,7 @@ function Joinus() {
         </div>
       </div>
 
-      <div className="mt-56 flex px-32 relative items-start">
+      <div className="mt-56 flex md:px-32 lg:md:px-32 px-5 relative items-start">
         <motion.div
           className="pb-32"
           initial="hidden"
@@ -220,7 +221,7 @@ function Joinus() {
           }}
         >
           <h1 className="text-4xl font-bold mb-10">Register Your Interest</h1>
-          <p className="w-[65%] mb-10">
+          <p className="md:w-[65%] lg:w-[65%] w-full mb-10">
             Ready to join The Soil Story family? Click on the link given below
             and fill out the form below to express your interest in becoming a
             partner. Our team will review your application and get in touch with
@@ -237,7 +238,7 @@ function Joinus() {
           </button>
         </motion.div>
         <motion.div
-          className="absolute bottom-0 right-0"
+          className="absolute bottom-0 right-0 hidden md:block lg:block"
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.8, ease: "linear" }}

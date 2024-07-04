@@ -16,7 +16,7 @@ function Contactus() {
       <div className="flex justify-center w-full mt-5">
         <div
           style={{ backgroundImage: `url(${img1})` }}
-          className="p-10 bg-no-repeat w-[80%] "
+          className="p-5 lg:p-10 md:p-10 bg-no-repeat w-[80%] rounded-3xl"
         >
           <center>
             <h2
@@ -28,7 +28,7 @@ function Contactus() {
             <h1 className="font-semibold text-5xl mt-2 mb-6 text-white">
               Get in Touch
             </h1>
-            <p className="w-[35%] text-white text-base mb-30 h-[125px]">
+            <p className="w-[100%] md:w-[35%] lg:w-[35%] text-white text-base mb-30 h-[125px]">
               We&apos;d love to hear from you! Whether you have a question, need
               assistance, or want to share your feedback, our team is here to
               help. Reach out to us using any of the methods below.
@@ -36,7 +36,7 @@ function Contactus() {
           </center>
         </div>
       </div>
-      <div className="flex gap-20 justify-center mt-10 mb-20">
+      <div className="flex flex-col md:flex-row lg:flex-row gap-20 justify-center items-center mt-10 mb-20">
         <div
           className="text-center w-[250px] h-[250px] border hover:cursor-pointer "
           onClick={SendEmail}
