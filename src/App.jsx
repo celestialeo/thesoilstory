@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"; // Import the Analytics component
 import HomePage from "./components/Home/HomePage";
 import Contactus from "./components/ContactUs/Contactus";
 import Team from "./components/Team/Team";
@@ -7,10 +8,12 @@ import Joinus from "./components/JoinUs/Joinus";
 import Blog from "./components/blog/Blog";
 import AboutUs from "./components/AboutUs/AboutUs";
 import JoinUsCTA from "./components/AboutUs/JoinUsCTA";
+
 function App() {
   return (
     <>
       <BrowserRouter>
+        <Analytics /> {/* Add the Analytics component */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact-us" element={<Contactus />} />
