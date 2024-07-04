@@ -151,15 +151,9 @@ body {
 }
 
 .team-header h3 {
-<<<<<<< HEAD
-  font-family: 'Caveat';
-  color: #4BAF47;
-  font-size: 2rem;
-=======
   font-family: "Caveat";
   color: #4baf47;
   font-size: 2.25rem;
->>>>>>> soilstoryv2
   margin-bottom: 1.25rem;
   margin-top: -2%;
 }
@@ -260,9 +254,5 @@ body {
 
 .team-footer .text-gray-600 {
   color: #718096;
-<<<<<<< HEAD
-  font-size: 0.7rem;
-=======
   font-size: 0.875rem;
->>>>>>> soilstoryv2
 }

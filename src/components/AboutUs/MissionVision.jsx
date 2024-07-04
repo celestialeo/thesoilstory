@@ -5,11 +5,7 @@ import { motion } from "framer-motion";
 const MissionVision = () => {
   return (
     <>
-<<<<<<< HEAD
-      <div className="px-32 py-32">
-=======
       <div className="px-5 py-5 md:px-32 md:py-32 lg:px-32 lg:py-32">
->>>>>>> soilstoryv2
         <motion.div
           className="flex gap-20 items-start"
           initial="hidden"
@@ -23,11 +19,7 @@ const MissionVision = () => {
           <img
             src={visionImage}
             alt="Our Mission"
-<<<<<<< HEAD
-            className="rounded-xl w-full mb-4"
-=======
             className="rounded-xl w-full mb-4 hidden md:block lg:block"
->>>>>>> soilstoryv2
           />
           <div>
             <h2
